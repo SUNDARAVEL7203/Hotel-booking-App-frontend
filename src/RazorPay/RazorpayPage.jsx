@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import "./RazorpayPage.css";
+import "./RazorPayPage.css";
 
 const RazorpayPage = () => {
   const validationSchema = Yup.object().shape({
