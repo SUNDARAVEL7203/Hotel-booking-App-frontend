@@ -24,17 +24,10 @@ console.log(user)
 
                 <nav>
                     <Link to="/">Home </Link>
-                
-                  {user ? (<>
                     <Link to ="/Register">Register</Link>
                     <Link to = "/Login">Login</Link>
-                    </> 
-                   ):(
-                    <>
-                       <Link to = "/Create/Room">Create</Link>
-                       <button onClick={handleLogout}>Logout</button>
-                    </>
-                  )}
+                  
+                   
                  
                    
     
