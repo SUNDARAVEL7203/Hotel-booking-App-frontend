@@ -1,7 +1,7 @@
 import axios from 'axios'
 import toast from 'react-hot-toast'
 
-const {token} =JSON.parse(localStorage.getItem("user"))
+
 
 console.log(token)
 export const createRoom = (roomData) => async (dispatch) => {
