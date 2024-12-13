@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 // Action for fetching all bookings
 export const getBookings = () => async (dispatch) => {
   try {
-    const res = await axios.get('https://hotel-booking-app-backend-fpkz.onrender.com/api/bookings');
+    const res = await axios.get('https://hotel-booking-app-backend-4dcd.onrender.com/api/bookings');
     dispatch({ type: 'GET_BOOKINGS_SUCCESS', payload: res.data });
     console.log('Bookings fetched successfully');
   } catch (error) {
@@ -17,7 +17,7 @@ export const getBookings = () => async (dispatch) => {
 // Action for creating a booking
 export const createBooking = (newBooking) => async (dispatch) => {
   try {
-    const res = await axios.post('https://hotel-booking-app-backend-fpkz.onrender.com/api/bookings', newBooking);
+    const res = await axios.post('https://hotel-booking-app-backend-4dcd.onrender.com/api/bookings', newBooking);
     dispatch({ type: 'CREATE_BOOKING_SUCCESS', payload: res.data });
     toast.success('Booking created successfully!');
     console.log('Booking created successfully');
@@ -31,7 +31,7 @@ export const createBooking = (newBooking) => async (dispatch) => {
 // Action for deleting a booking
 export const deleteBooking = (bookingId) => async (dispatch) => {
   try {
-    await axios.delete(`https://hotel-booking-app-backend-fpkz.onrender.com/api/bookings/${bookingId}`);
+    await axios.delete(`https://hotel-booking-app-backend-4dcd.onrender.com/api/bookings/${bookingId}`);
     dispatch({ type: 'DELETE_BOOKING_SUCCESS', payload: bookingId });
     toast.success('Booking deleted successfully!');
     console.log('Booking deleted successfully');
@@ -45,7 +45,7 @@ export const deleteBooking = (bookingId) => async (dispatch) => {
 // Action for updating a booking
 export const updateBooking = (bookingId, updatedData) => async (dispatch) => {
   try {
-    const res = await axios.put(`https://hotel-booking-app-backend-fpkz.onrender.com/api/bookings/${bookingId}`, updatedData);
+    const res = await axios.put(`https://hotel-booking-app-backend-4dcd.onrender.com/api/bookings/${bookingId}`, updatedData);
     dispatch({ type: 'UPDATE_BOOKING_SUCCESS', payload: res.data });
     toast.success('Booking updated successfully!');
     console.log('Booking updated successfully');
