@@ -1,5 +1,5 @@
 import React from "react";
-import "./AboutUs.css"; // Ensure this file contains the necessary styles
+import "./Aboutus.css"; // Ensure this file contains the necessary styles
 
 const AboutUs = () => {
   return (
