@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { registerUser,  } from '../../Features/auth/authSlice'
 import { useSelector, useDispatch } from "react-redux"
 import {useNavigate, } from 'react-router-dom' 
+import './Register.css'
 
 
 
@@ -45,36 +46,55 @@ const Register = () => {
 
     return (
         
-        <div className='container'>
-                  <h1 className='heading center'>Register</h1>
-            <div className='form-wrapper'>
-                <form onSubmit={handleSumbit}>
-                    <div className='input-group'>
-                        <label htmlFor='name'>Name</label>
-                        <input type='text' name='name' placeholder='enter your Name'
-                         onChange={handleChange}  value={name}/>
-
-                    </div>
-                    <div className='input-group'>
-                        <label htmlFor='email'>Email</label>
-                        <input type='email' name='email' placeholder='Enter your email'
-                         onChange={handleChange} value={email}/>
-
-                    </div>
-
-                    <div className='input-group'>
-                        <label htmlFor='Password'>Password</label>
-                        <input type='password' name='password' placeholder='Enter your password'
-                        onChange={handleChange} value={password}/>
-
-                    </div>
-                     <button type='submit'>Submit</button>
-                </form>
-
+        <div className="register-container">
+        <div className="register-card">
+          <h1 className="register-title">Join the Adventure!</h1>
+          <p className="register-subtitle">
+            Create your account and start your journey with us
+          </p>
+          <form className="register-form">
+            <div className="register-name-fields">
+           
             </div>
-
-
+            
+            <input
+            type="name"
+            name='name'
+            placeholder="Enter your name"
+            onChange={handleChange} 
+             value={name}
+            className="register-input"
+            required
+            />
+            <input
+              type='email'
+              name='email' 
+              placeholder='Enter your email'
+              onChange={handleChange}
+               value={email}
+              className="register-input"
+              required
+            />
+            <input
+            type='password' 
+            name='password' 
+            placeholder='Enter your password'
+            onChange={handleChange}
+            value={password}
+              className="register-input"
+              required
+            />
+            <button type="submit" className="register-button">
+              Register
+            </button>
+          </form>
+          <div className="register-links">
+            <a href="/login" className="back-to-login">
+              Back to login
+            </a>
+          </div>
         </div>
+      </div>
     )
 }
 

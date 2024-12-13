@@ -1,0 +1,71 @@
+.footer {
+    background-color: #002e7a;
+    color: white;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .newsletter-input {
+    width: 70%;
+    padding: 8px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .subscribe-button {
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .subscribe-button:hover {
+    background-color: #ffbf00;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid white;
+    padding-top: 10px;
+  }

@@ -1,4 +1,5 @@
 const initialState = {
+
     authUser: JSON.parse(localStorage.getItem('user')) || null,
     error: null,
     isLoading: false,
