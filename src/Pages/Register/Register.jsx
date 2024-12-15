@@ -84,7 +84,7 @@ const Register = () => {
               className="register-input"
               required
             />
-            <button type="submit" className="register-button">
+            <button type="submit" className="register-button" onClick={handleSumbit}>
               Register
             </button>
           </form>

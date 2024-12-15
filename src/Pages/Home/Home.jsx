@@ -8,11 +8,11 @@ const Home = () => {
     const { user } = useSelector((state) => state.auth); // Get user state from Redux
 
     const destinations = [
-        { name: "Anna Nagar", image: "https://via.placeholder.com/150" },
-        { name: "Velachery", image: "https://via.placeholder.com/150" },
-        { name: "OMR", image: "https://via.placeholder.com/150" },
-        { name: "Neelankarai", image: "https://via.placeholder.com/150" },
-        { name: "Kovalam", image: "https://via.placeholder.com/150" },
+        { name: "Anna Nagar", image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734180908/bxjknhq90ak98lzopxeb.jpg" },
+        { name: "Velachery", image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734181351/n5v2lcrvlmhuk14tfmat.png" },
+        { name: "OMR", image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734181741/rlqjtshgcurwyxvjjbsr.png" },
+        { name: "Neelankarai", image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734185127/d0ktkegpa0ufpxdq4ot1.png" },
+        { name: "Kovalam", image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734185442/wmbnr7hwaj7svm0mp2le.png" },
     ];
 
     const hotels = [
@@ -20,7 +20,7 @@ const Home = () => {
             name: "Anna Nagar",
             id: 9,
             location: "Near anna nagar tower par | 3.3 kms from VR Mall",
-            image: "https://via.placeholder.com/200",
+            image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734186662/u6smwkdunoqqf5y0posx.png",
             price: "18,900",
             rating: 5,
             features: [
@@ -32,7 +32,7 @@ const Home = () => {
             name: "Kovalam Resort",
             id: 10,
             location: "500 meters from the Rajiv Gandhi Infotech Park",
-            image: "https://via.placeholder.com/200",
+            image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734185442/wmbnr7hwaj7svm0mp2le.png",
             price: "25,300",
             rating: 4,
             features: [
@@ -46,7 +46,7 @@ const Home = () => {
             name: "Velachery",
             id: 11,
             location: "5.4 km from centre",
-            image: "https://via.placeholder.com/200",
+            image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734187174/hwqgkos9fv6dwhuge1cs.png",
             price: "11,300",
             rating: 5,
             features: [
@@ -59,7 +59,7 @@ const Home = () => {
             name: "OMR",
             id: 12,
             location: "Weikfield IT City Infopark | 7.1 km from centre",
-            image: "https://via.placeholder.com/200",
+            image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734187893/zkasbrfcqeoshxbp3o10.png",
             price: "14,599",
             rating: 3,
             features: [
@@ -70,10 +70,10 @@ const Home = () => {
             ],
         },
         {
-            name: "Green Park",
+            name: "Neelankarai",
             id: 13,
             location: "Xion Complex, | 14.2 km from centre",
-            image: "https://via.placeholder.com/200",
+            image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734188106/ky86xvfrwtfxxqkijgqd.png",
             price: "9,799",
             rating: 4.3,
             features: [
@@ -99,10 +99,10 @@ const Home = () => {
         }
     };
 
-  
+
     return (
         <div>
-             <div className="search-bar-container">
+            <div className="search-bar-container">
                 <h1>Discover your perfect stay around the globe</h1>
                 <p>Enter your dates to see the latest prices and begin your journey of relaxation and adventure today.</p>
                 <div className="search-bar">
@@ -188,7 +188,7 @@ const Home = () => {
                                         state: { hotelName: hotel.name, price: hotel.price },
                                     })
                                 }
-                              
+
                             >
                                 Book now
                             </button>
@@ -196,7 +196,38 @@ const Home = () => {
                     </div>
                 ))}
             </div>
-            {/* Footer and other content */}
+            <div>
+                <footer className="footer">
+                    <div className="footer-container">
+                        <div className="footer-section">
+                            <h3>Company Info</h3>
+                            <ul>
+                                <li><a href="/AboutUs">About Us</a></li>
+                                <li><a href="/AboutUS">Contact</a></li>
+                                <li><a href="/AboutUs">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div className="footer-section">
+                            <h3>Support</h3>
+                            <ul>
+                                <li><a href="/faqs">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div className="footer-section">
+                            <h3>Newsletter</h3>
+                            <p>Stay updated with our latest trends</p>
+                            <form>
+                                <input type="email" placeholder="Enter email" className="newsletter-input" />
+                                <button type="submit" className="subscribe-button">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div className="footer-bottom">
+                        <p>© 2024 Stay  Ease. All rights reserved.</p>
+                        <p>Designed and styled by Stay Ease.</p>
+                    </div>
+                </footer>
+            </div>
         </div>
     );
 };

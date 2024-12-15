@@ -50,7 +50,7 @@ const HotelList = () => {
       features: ['Free cancellation', 'No prepayment needed — pay at the property'],   
       rating: 5,
       price: 22000,
-      image: 'https://via.placeholder.com/150',
+      image: 'https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734192284/wbj2vjbtt4lilcn253ax.png',
     },
     {
       id : 2,
@@ -59,7 +59,7 @@ const HotelList = () => {
       features: ['Free cancellation', 'No prepayment needed — pay at the property', 'Free wifi', 'Free breakfast'],
       rating: 5,
       price: 25000,
-      image: 'https://via.placeholder.com/150',
+      image: 'https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734195237/azfxaeomieddotmjp6mc.jpg',
     },
 
     {
@@ -69,7 +69,7 @@ const HotelList = () => {
       features: ['Free cancellation', 'Ocean view', 'Free wifi', 'Free parking'],
       rating: 5,
       price: 27000,
-      image: 'https://via.placeholder.com/150',
+      image: 'https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734192519/aqgkqct318gpvixbwp2s.png',
     },
     {
       id : 4,
@@ -78,7 +78,7 @@ const HotelList = () => {
       features: ['Free cancellation', 'Free wifi', 'Free breakfast'],
       rating: 4,
       price: 18000,
-      image: 'https://via.placeholder.com/150',
+      image: 'https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734192558/exufrgn7r59zgmxaf7tj.png',
     },
     {
       id : 5,
@@ -87,35 +87,9 @@ const HotelList = () => {
       features: ['Free cancellation', 'No prepayment needed — pay at the property', 'Free wifi'],
       rating: 4,
       price: 15000,
-      image: 'https://via.placeholder.com/150',
+      image: 'https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734192603/jvb9io61zscirifcv3ru.png',
     },
-    {
-      id : 6,
-      name: 'Radisson Blu',
-      location: 'Egmore, Chennai | 2.0 kms from railway station',
-      features: ['Free cancellation', 'No prepayment needed — pay at the property', 'Free wifi'],
-      rating: 4,
-      price: 15000,
-      image: 'https://via.placeholder.com/150',
-    },
-    {
-      id : 7,
-      name: 'Park Hyatt Chennai',
-      location: 'Guindy, Chennai | 2.5 kms from Guindy National Park',
-      features: ['Luxury spa', 'Free cancellation', 'Pet-friendly', 'Free breakfast'],
-      rating: 5,
-      price: 26000,
-      image: 'https://via.placeholder.com/150',
-    },
-    {
-      id : 8,
-      name: 'Hilton Chennai',
-      location: 'Guindy, Chennai | 1.5 kms from airport',
-      features: ['Rooftop pool', 'Free cancellation', 'Free wifi', '24/7 room service'],
-      rating: 5,
-      price: 24000,
-      image: 'https://via.placeholder.com/150',
-    },
+   
   ];
 
   return (

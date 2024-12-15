@@ -8,8 +8,8 @@ export const createRoom = (roomData) => async (dispatch) => {
     const res = await axios.post('https://hotel-booking-app-backend-4dcd.onrender.com/api/rooms', roomData, {
       headers: {
         "Content-Type": "application/json", // Specify the content type
-        Authorization: `Bearer ${token}`, // Include an authorization token, if required
-        Accept: "application/json", // Specify accepted response format
+        Authorization: `Bearer ${token}`// Include an authorization token, if required
+      
       },
     } );
      console.log(res.data.room)

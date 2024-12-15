@@ -236,6 +236,13 @@
     font-family: "Poppins", sans-serif;
   }
   
+  .footer {
+    background-color: #002e7a;
+    color: white;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+  
   .footer-container {
     display: flex;
     justify-content: space-between;

@@ -23,7 +23,7 @@ const hotels = [
     descrption : "A serene stay awaits at our plush hotel, offering a blend of luxury and comfort with top-notch amenities.Experience the pinnacle of elegance in our beautifully designed rooms with stunning cityscape views.Indulge in gastronomic delights at our in-house restaurants, featuring local and international cuisines.Unwind in our state-of-the-art spa and wellness center, a perfect retreat for the senses.Located in the heart of the city, our hotel is the ideal base for both leisure and business travelers",
     rating: 5,
     price: 22000,
-    image: 'https:/unsplash.com/photos/3d-render-of-luxury-hotel-lobby-and-reception-wVmIezfRjUA/150',
+    image: 'https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734192284/wbj2vjbtt4lilcn253ax.png',
   },
   {
     id : 2,
@@ -33,7 +33,7 @@ const hotels = [
     descrption : "A serene stay awaits at our plush hotel, offering a blend of luxury and comfort with top-notch amenities.Experience the pinnacle of elegance in our beautifully designed rooms with stunning cityscape views.Indulge in gastronomic delights at our in-house restaurants, featuring local and international cuisines.Unwind in our state-of-the-art spa and wellness center, a perfect retreat for the senses.Located in the heart of the city, our hotel is the ideal base for both leisure and business travelers.",
     rating: 5,
     price: 25000,
-    image: 'https://via.placeholder.com/150',
+    image: 'https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734195237/azfxaeomieddotmjp6mc.jpg',
   },
 
   {
@@ -44,7 +44,7 @@ const hotels = [
     descrption : "A serene stay awaits at our plush hotel, offering a blend of luxury and comfort with top-notch amenities.Experience the pinnacle of elegance in our beautifully designed rooms with stunning cityscape views.Indulge in gastronomic delights at our in-house restaurants, featuring local and international cuisines.Unwind in our state-of-the-art spa and wellness center, a perfect retreat for the senses.Located in the heart of the city, our hotel is the ideal base for both leisure and business travelers.",
     rating: 5,
     price: 27000,
-    image: 'https://via.placeholder.com/150',
+    image: 'https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734192519/aqgkqct318gpvixbwp2s.png',
   },
   {
     id : 4,
@@ -54,7 +54,7 @@ const hotels = [
     descrption : "A serene stay awaits at our plush hotel, offering a blend of luxury and comfort with top-notch amenities.Experience the pinnacle of elegance in our beautifully designed rooms with stunning cityscape views.Indulge in gastronomic delights at our in-house restaurants, featuring local and international cuisines.Unwind in our state-of-the-art spa and wellness center, a perfect retreat for the senses.Located in the heart of the city, our hotel is the ideal base for both leisure and business travelers.",
     rating: 4,
     price: 18000,
-    image: 'https://via.placeholder.com/150',
+    image: 'https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734192558/exufrgn7r59zgmxaf7tj.png',
   },
   {
     id : 5,
@@ -64,43 +64,14 @@ const hotels = [
     descrption : "A serene stay awaits at our plush hotel, offering a blend of luxury and comfort with top-notch amenities.Experience the pinnacle of elegance in our beautifully designed rooms with stunning cityscape views.Indulge in gastronomic delights at our in-house restaurants, featuring local and international cuisines.Unwind in our state-of-the-art spa and wellness center, a perfect retreat for the senses.Located in the heart of the city, our hotel is the ideal base for both leisure and business travelers.",
     rating: 4,
     price: 15000,
-    image: 'https://via.placeholder.com/150',
+    image: 'https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734192603/jvb9io61zscirifcv3ru.png',
   },
-  {
-    id : 6,
-    name: 'Radisson Blu',
-    location: 'Egmore, Chennai | 2.0 kms from railway station',
-    features: ['Free cancellation', 'No prepayment needed — pay at the property', 'Free wifi'],
-    descrption : "A serene stay awaits at our plush hotel, offering a blend of luxury and comfort with top-notch amenities.Experience the pinnacle of elegance in our beautifully designed rooms with stunning cityscape views.Indulge in gastronomic delights at our in-house restaurants, featuring local and international cuisines.Unwind in our state-of-the-art spa and wellness center, a perfect retreat for the senses.Located in the heart of the city, our hotel is the ideal base for both leisure and business travelers.",
-    rating: 4,
-    price: 15000,
-    image: 'https://via.placeholder.com/150',
-  },
-  {
-    id : 7,
-    name: 'Park Hyatt Chennai',
-    location: 'Guindy, Chennai | 2.5 kms from Guindy National Park',
-    features: ['Luxury spa', 'Free cancellation', 'Pet-friendly', 'Free breakfast'],
-    descrption : "A serene stay awaits at our plush hotel, offering a blend of luxury and comfort with top-notch amenities.Experience the pinnacle of elegance in our beautifully designed rooms with stunning cityscape views.Indulge in gastronomic delights at our in-house restaurants, featuring local and international cuisines.Unwind in our state-of-the-art spa and wellness center, a perfect retreat for the senses.Located in the heart of the city, our hotel is the ideal base for both leisure and business travelers.",
-    rating: 5,
-    price: 26000,
-    image: 'https://via.placeholder.com/150',
-  },
-  {
-    id : 8,
-    name: 'Hilton Chennai',
-    location: 'Guindy, Chennai | 1.5 kms from airport',
-    features: ['Rooftop pool', 'Free cancellation', 'Free wifi', '24/7 room service'],
-    descrption : "A serene stay awaits at our plush hotel, offering a blend of luxury and comfort with top-notch amenities.Experience the pinnacle of elegance in our beautifully designed rooms with stunning cityscape views.Indulge in gastronomic delights at our in-house restaurants, featuring local and international cuisines.Unwind in our state-of-the-art spa and wellness center, a perfect retreat for the senses.Located in the heart of the city, our hotel is the ideal base for both leisure and business travelers.",
-    rating: 5,
-    price: 24000,
-    image: 'https://via.placeholder.com/150',
-  },
+  
   {
     name: "Anna Nagar",
     id : 9,
     location: "Near anna nagar tower par | 3.3 kms from VR Mall",
-    image: "https://via.placeholder.com/200", // Replace with actual image URL
+    image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734186662/u6smwkdunoqqf5y0posx.png", // Replace with actual image URL
     price: 18900,
     rating: 5,
     features: [
@@ -112,7 +83,7 @@ const hotels = [
     name: "Kovalam Resort",
     id : 10,
     location: "500 meters from the Rajiv Gandhi Infotech Park",
-    image: "https://via.placeholder.com/200", // Replace with actual image URL
+    image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734185442/wmbnr7hwaj7svm0mp2le.png", // Replace with actual image URL
     price: 25300,
     rating: 4,
     features: [
@@ -126,7 +97,7 @@ const hotels = [
   name: "Velachery",
   id : 11,
   location: "5.4 km from centre",
-  image: "https://via.placeholder.com/200", // Replace with actual image URL
+  image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734187174/hwqgkos9fv6dwhuge1cs.png", // Replace with actual image URL
   price: 11300,
   rating: 5,
   features: [
@@ -139,7 +110,7 @@ const hotels = [
   name: "OMR",
   id : 12,
   location: "Weikfield IT City Infopark | 7.1 km from centre",
-  image: "https://via.placeholder.com/200", // Replace with actual image URL
+  image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734187893/zkasbrfcqeoshxbp3o10.png", // Replace with actual image URL
   price: 14599,
   rating: 3,
   features: [
@@ -150,10 +121,10 @@ const hotels = [
   ],
 },
 {
-  name: "Green Park",
+  name: "Neelankarai",
   id: 13,
   location: "Xion Complex, | 14.2 km from centre",
-  image: "https://via.placeholder.com/200", // Replace with actual image URL
+  image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734188106/ky86xvfrwtfxxqkijgqd.png", // Replace with actual image URL
   price: 9799,
   rating: 4.3,
   features: [
@@ -186,6 +157,7 @@ function App() {
             <Route path='/Aboutus' element={<AboutUs/>}></Route>
              <Route path='/Hotels' element={<HotelList hotels={hotels}/>}></Route>
              <Route path="/hotel/:id" element={<HotelDetails hotels={hotels} />} />
+         
              <Route path="/Booking" element={<Booking/>}></Route>
              <Route path="/BookingDetails" element={<BookingDetails/>} ></Route>
              <Route path="/AdminDashboard" element={<AdminDashboard/>}></Route>

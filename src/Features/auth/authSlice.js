@@ -6,14 +6,23 @@ import toast from 'react-hot-toast';
 export const loginUser = (userData, navigate) => async (dispatch) => {
 
   try {
-    const res = await axios.post('https://hotel-booking-app-backend-4dcd.onrender.com/api/users/login', userData);
+    const res = await axios.post('http://localhost:5000/api/users/login', userData);
     dispatch({ type: 'LOGIN_SUCCESS', payload: res.data });
     await localStorage.setItem('authToken', res.data.token)
     console.log(res.data)
     toast.success("Login success")
-    setTimeout(() => {
-      navigate("/Dashboard");
-    }, 1000);
+    if(res.data.admin){
+      setTimeout(() => {
+        navigate("/Dashboard");
+      }, 1000);
+    }
+    else {
+      setTimeout(() => {
+        navigate("/")
+      }, 1000)
+    }
+  
+   
   } catch (error) {
     dispatch({ type: 'LOGIN_FAIL', payload: error.response.data.message});
     const errorMessage = error?.response?.data?.error || error;
@@ -24,7 +33,7 @@ export const loginUser = (userData, navigate) => async (dispatch) => {
 
 export const logoutUser = (navigate) => async (dispatch) => {
   try {
-    await axios.post('https://hotel-booking-app-backend-4dcd.onrender.com/api/users/logout');
+    await axios.post('http://localhost:5000/api/users/logout');
     dispatch({ type: 'LOGOUT_SUCCESS' });
    console.log("success")
     setTimeout(() => {
@@ -40,7 +49,7 @@ export const logoutUser = (navigate) => async (dispatch) => {
 
 export const registerUser = (userData, navigate) => async (dispatch) => {
   try {
-    const res = await axios.post('https://hotel-booking-app-backend-4dcd.onrender.com/api/users', userData);
+    const res = await axios.post('http://localhost:5000/api/users', userData);
     dispatch({ type: 'REGISTER_SUCCESS', payload: res.data });
     toast.success("success")
     setTimeout(() => {

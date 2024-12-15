@@ -39,14 +39,17 @@ const CreateRoom = () => {
 
     // handle File change
     const handleFileChange = (e) => {
+      console.log(e.target.files)
       setFiles(Array.from(e.target.files));
+     
     };
   
 
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
-
+   console.log(files[0])
     if (!name || !price || !roomNumbers) {
       return;
     }
@@ -66,7 +69,9 @@ const CreateRoom = () => {
 
 const datatoSubmit = {name, price, desc,roomNumbers}
 console.log(datatoSubmit)
-    
+for (let [key, value] of formData.entries()) {
+  console.log(`${key}: ${value}`);
+}
     // dispatch createRoom function
     dispatch(createRoom(formData));
     
@@ -113,12 +118,12 @@ console.log(datatoSubmit)
 
             <div className="input-group">
               <label htmlFor="desc">Room Numbers</label>
-              <textarea
+              <input
                 name="roomNumbers"
                 onChange={handleChange}
                 value={roomNumbers}
                 placeholder="enter room numbers separated by commas eg: 202, 203, 204, 400"
-              ></textarea>
+              ></input>
             </div>
 
             <div className="input-group">
