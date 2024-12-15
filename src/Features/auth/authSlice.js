@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 export const loginUser = (userData, navigate) => async (dispatch) => {
 
   try {
-    const res = await axios.post('http://localhost:5000/api/users/login', userData);
+    const res = await axios.post('https://hotel-booking-app-backend-4dcd.onrender.com/api/users/login', userData);
     dispatch({ type: 'LOGIN_SUCCESS', payload: res.data });
     await localStorage.setItem('authToken', res.data.token)
     console.log(res.data)
@@ -33,7 +33,7 @@ export const loginUser = (userData, navigate) => async (dispatch) => {
 
 export const logoutUser = (navigate) => async (dispatch) => {
   try {
-    await axios.post('http://localhost:5000/api/users/logout');
+    await axios.post('https://hotel-booking-app-backend-4dcd.onrender.com/logout');
     dispatch({ type: 'LOGOUT_SUCCESS' });
    console.log("success")
     setTimeout(() => {
@@ -49,7 +49,7 @@ export const logoutUser = (navigate) => async (dispatch) => {
 
 export const registerUser = (userData, navigate) => async (dispatch) => {
   try {
-    const res = await axios.post('http://localhost:5000/api/users', userData);
+    const res = await axios.post('https://hotel-booking-app-backend-4dcd.onrender.com/api/users', userData);
     dispatch({ type: 'REGISTER_SUCCESS', payload: res.data });
     toast.success("success")
     setTimeout(() => {
