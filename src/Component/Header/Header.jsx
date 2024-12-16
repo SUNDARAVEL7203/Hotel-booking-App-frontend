@@ -1,29 +1,29 @@
-import { Link, useNavigate } from "react-router-dom"
-import './Headerstyle.css'
-
-
+import { Link, useNavigate } from "react-router-dom";
+import './Headerstyle.css';
 
 const Header = () => {
-  const navigate = useNavigate()
-    const handleLogout = () => {
-        // Perform any logout operations (e.g., clearing user data, tokens)
-        console.log("User logged out");
-        // Navigate to the login page
-        navigate('/login');
-      };
+  const navigate = useNavigate();
 
-  const user = JSON.parse(localStorage.getItem('user'))
+  // Retrieve user data from localStorage
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  const handleLogout = () => {
+    // Clear user data and tokens
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+
+    console.log("User logged out");
+    // Navigate to the login page
+    navigate('/login');
+  };
+
   return (
-
     <nav className="navbar">
       <div className="navbar-brand">
         <h1 className="stayease">STAY EASE</h1>
-
       </div>
       <ul className="navbar-links">
-  
-
-          <li>
+        <li>
           <Link to="/" className="nav-link">Home</Link>
         </li>
         <li>
@@ -32,22 +32,48 @@ const Header = () => {
         <li>
           <Link to="/Aboutus" className="nav-link">About Us</Link>
         </li>
-        <li>
-          <Link to="/Login" className="nav-link highlight">Login</Link>
-        </li>
-        <li>
-          <Link to="/Register" className="nav-link highlight">Register</Link>
-        </li>
 
-
-     
+        {/* Conditional rendering based on user login status */}
+        {user ? (
+          <>
+            {/* Profile Icon (Placeholder Image) */}
+            <li>
+              <img
+                src="/profile-icon.png"
+                alt="Profile"
+                className="profile-icon"
+                
+              />
+            </li>
+            {/* Logout Button */}
+            <li>
+              <button onClick={handleLogout} className="logout-button">
+                Logout
+              </button>
+            </li>
+          </>
+        ) : (
+          <>
+            <li>
+              <Link to="/Login" className="nav-link highlight">Login</Link>
+            </li>
+            <li>
+              <Link to="/Register" className="nav-link highlight">Register</Link>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
+  );
+};
 
-  )
-}
+export default Header;
 
-export default Header
+
+
+
+
+
 
 
 
