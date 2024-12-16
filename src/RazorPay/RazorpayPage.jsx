@@ -2,11 +2,12 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useLocation } from "react-router-dom";
 import * as Yup from "yup";
+import axios from "axios";
 import "./RazorPayPage.css";
 
 const RazorpayPage = () => {
   const location = useLocation();
-  const { price } = location.state || { price: 0 }; // Default price to 0 if not passed
+  const { price } = location.state || { price: 0 }; // Price passed from previous page
 
   const validationSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email address").required("Required"),
@@ -28,10 +29,56 @@ const RazorpayPage = () => {
       .required("Required"),
   });
 
-  const handleSubmit = (values) => {
-    alert(
-      `Payment form submitted with values: ${JSON.stringify(values)} and amount: ₹${price}`
-    );
+  const handleSubmit = async (values) => {
+    try {
+      // Step 1: Create order on backend
+      const response = await axios.post("http://localhost:5000/order", {
+        amount: price,
+      });
+
+      const { data } = response.data;
+
+      // Step 2: Initialize Razorpay Checkout
+      const options = {
+        key: "rzp_test_Ioy9td4iHG3nYR", // Replace with your Razorpay Key ID
+        amount: data.amount, // Amount in paise
+        currency: "INR",
+        name: "StayEase",
+        description: "Hotel Booking Payment",
+        order_id: data.id, // Razorpay Order ID
+        handler: async function (response) {
+          // Step 3: Verify payment on backend
+          const verifyResponse = await axios.post("http://localhost:5000/verify", {
+            razorpay_order_id: response.razorpay_order_id,
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_signature: response.razorpay_signature,
+          });
+
+          alert(verifyResponse.data.message); // Show success message
+        },
+        prefill: {
+          name: values.name,
+          email: values.email,
+          contact: "9999999999", // Dummy contact (optional)
+        },
+        notes: {
+          address: `${values.address}, ${values.city}, ${values.state}, ${values.postalCode}`,
+        },
+        theme: {
+          color: "#3399cc",
+        },
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+
+      rzp.on("payment.failed", function (response) {
+        alert("Payment Failed. Please try again.");
+      });
+    } catch (error) {
+      console.error("Error in payment process:", error);
+      alert("Something went wrong! Please try again.");
+    }
   };
 
   return (

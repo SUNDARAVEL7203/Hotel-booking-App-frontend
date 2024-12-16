@@ -73,7 +73,7 @@ const hotels = [
     id : 9,
     location: "Near anna nagar tower par | 3.3 kms from VR Mall",
     image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734186662/u6smwkdunoqqf5y0posx.png", // Replace with actual image URL
-    price: 18900,
+    price: 1,
     rating: 5,
     features: [
         "Free cancellation",

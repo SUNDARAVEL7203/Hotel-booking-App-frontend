@@ -21,7 +21,7 @@ const Home = () => {
             id: 9,
             location: "Near anna nagar tower par | 3.3 kms from VR Mall",
             image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734186662/u6smwkdunoqqf5y0posx.png",
-            price: "18,900",
+            price: 1,
             rating: 5,
             features: [
                 "Free cancellation",
@@ -33,7 +33,7 @@ const Home = () => {
             id: 10,
             location: "500 meters from the Rajiv Gandhi Infotech Park",
             image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734185442/wmbnr7hwaj7svm0mp2le.png",
-            price: "25,300",
+            price: 25300,
             rating: 4,
             features: [
                 "Free cancellation",
@@ -60,7 +60,7 @@ const Home = () => {
             id: 12,
             location: "Weikfield IT City Infopark | 7.1 km from centre",
             image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734187893/zkasbrfcqeoshxbp3o10.png",
-            price: "14,599",
+            price: 14599,
             rating: 3,
             features: [
                 "Pets allowed",
@@ -74,7 +74,7 @@ const Home = () => {
             id: 13,
             location: "Xion Complex, | 14.2 km from centre",
             image: "https://res.cloudinary.com/dgsnmd3jg/image/upload/v1734188106/ky86xvfrwtfxxqkijgqd.png",
-            price: "9,799",
+            price: 9799,
             rating: 4.3,
             features: [
                 "Pets allowed",
