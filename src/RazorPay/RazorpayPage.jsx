@@ -38,17 +38,17 @@ const RazorpayPage = () => {
 
       const { data } = response.data;
 
-      // Step 2: Initialize Razorpay Checkout
+
       const options = {
-        key: "rzp_test_Ioy9td4iHG3nYR", // Replace with your Razorpay Key ID
-        amount: data.amount, // Amount in paise
+        key: "UvnZ5ZE5hApj4HNPSlryN0PH", 
+        amount: data.amount,
         currency: "INR",
-        name: "StayEase",
+        name: "SUNDARAVEL",
         description: "Hotel Booking Payment",
-        order_id: data.id, // Razorpay Order ID
+        order_id: rzp_test_IP4i7NRQlNrS69 ,
         handler: async function (response) {
-          // Step 3: Verify payment on backend
-          const verifyResponse = await axios.post("http://localhost:5000/verify", {
+          
+          const verifyResponse = await axios.post("https://hotel-booking-app-backend-4dcd.onrender.com/verify", {
             razorpay_order_id: response.razorpay_order_id,
             razorpay_payment_id: response.razorpay_payment_id,
             razorpay_signature: response.razorpay_signature,
