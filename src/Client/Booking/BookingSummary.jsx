@@ -22,7 +22,9 @@ const BookingSummary = () => {
 
   // Handle proceed to pay button
   const handleProceedToPay = () => {
-    navigate("/RazorPayPage", { state: formData });
+    navigate("/RazorPayPage", {
+        state: { price: formData.price }, // Pass price in state
+      });
   };
 
   return (

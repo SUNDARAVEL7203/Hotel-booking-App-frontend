@@ -1,9 +1,13 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useLocation } from "react-router-dom";
 import * as Yup from "yup";
 import "./RazorPayPage.css";
 
 const RazorpayPage = () => {
+  const location = useLocation();
+  const { price } = location.state || { price: 0 }; // Default price to 0 if not passed
+
   const validationSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email address").required("Required"),
     name: Yup.string().required("Required"),
@@ -25,7 +29,9 @@ const RazorpayPage = () => {
   });
 
   const handleSubmit = (values) => {
-    alert("Payment form submitted with values: " + JSON.stringify(values));
+    alert(
+      `Payment form submitted with values: ${JSON.stringify(values)} and amount: ₹${price}`
+    );
   };
 
   return (
@@ -115,7 +121,7 @@ const RazorpayPage = () => {
                 </div>
               </div>
               <button type="submit" className="pay-button">
-                Pay Now
+                Pay Now ₹{price.toLocaleString()}
               </button>
             </Form>
           )}
