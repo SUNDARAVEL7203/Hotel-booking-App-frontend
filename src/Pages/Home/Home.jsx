@@ -223,8 +223,8 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="footer-bottom">
-                        <p>© 2024 Stay  Ease. All rights reserved.</p>
-                        <p>Designed and styled by Stay Ease.</p>
+                        <p>© Sundaravek K.</p>
+                        
                     </div>
                 </footer>
             </div>
