@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa"
 import './Headerstyle.css';
 
 const Header = () => {
@@ -38,11 +39,10 @@ const Header = () => {
           <>
             {/* Profile Icon (Placeholder Image) */}
             <li>
-              <img
-                src="/profile-icon.png"
-                alt="Profile"
-                className="profile-icon"
-                
+            <FaUserCircle
+                size={30} // Set icon size
+                color="white"
+                style={{ cursor: "pointer", marginRight: "10px" }}
               />
             </li>
             {/* Logout Button */}

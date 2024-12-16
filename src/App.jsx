@@ -13,6 +13,7 @@ import HotelDetails from './Pages/HotelDetails/HotelDetails'
 import Booking from './Client/Booking/Booking'
 import BookingDetails from './Client/Booking/BookingDetails'
 import AdminDashboard from './Pages/AdminDashboard/AdminDashboard'
+import BookingSummary from './Client/Booking/BookingSummary'
 
 const hotels = [
   {
@@ -160,6 +161,7 @@ function App() {
          
              <Route path="/Booking" element={<Booking/>}></Route>
              <Route path="/BookingDetails" element={<BookingDetails/>} ></Route>
+             <Route path="/BookingSummary" element={<BookingSummary/>}></Route>
              <Route path="/AdminDashboard" element={<AdminDashboard/>}></Route>
           </Routes>
         </BrowserRouter>

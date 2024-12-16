@@ -8,7 +8,7 @@ function BookingDetails() {
   const { hotelName, price, name, email, checkInDate, checkOutDate, image } = state;
 
   const handleProceedToPay = () => {
-    navigate('/RazorpayPage', { state: { price } });
+    navigate('/RazorPaypage', { state: { price } });
   };
 
   return (
